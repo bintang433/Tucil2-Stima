@@ -35,7 +35,7 @@ def divideAndConquer(listOfPoint):
     closestPoint = []
     if len(listOfPoint)==1:                                                         # Jika dalam list hanya ada 1 titik, jaraknya di set
         return DEFINE_MAX_DISTANCE, closestPoint                                    # dengan nilai infinity
-    if len(listOfPoint)==2:
+    elif len(listOfPoint)==2:
         divideAndConquerCalculationCount += 1                                       # Jika ada 2 titik, dihitung dan
         closestPoint += listOfPoint                                                 # dikembalikan jaraknya. titik yang dihitung selalu
         return calculateDistance(listOfPoint[0], listOfPoint[1]), closestPoint      # dicatat untuk pengerjaan bonus visualisasi
@@ -45,7 +45,7 @@ def divideAndConquer(listOfPoint):
         secondSection = listOfPoint[len(listOfPoint)//2:]
 
         # Catat posisi tengah 
-        midOfAxis = ((listOfPoint[(len(listOfPoint)//2)-1][0] - listOfPoint[(len(listOfPoint)//2)][0]) / 2) + listOfPoint[(len(listOfPoint)//2)-1][0]
+        midOfAxis = ((listOfPoint[(len(listOfPoint)//2)-1][0] + listOfPoint[(len(listOfPoint)//2)][0]) / 2)
 
         # Hitung jarak terdekat di bagian pertama dan kedua dengan algoritma divide and conquer
         smallestDistanceFirstSection, closestPointFirstSection = divideAndConquer(firstSection)
