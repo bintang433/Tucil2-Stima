@@ -28,9 +28,9 @@ smallestDistanceBruteForce = fun.bruteForce(listOfPoint)
 end_time_BF = time.time()
 total_time_BF = (end_time_BF - start_time_BF) * 1000
 
-print(f"\nsmallest distance with divide and conquer : {smallestDistanceDivideAndConquer:.2f}. Number of calculation = {fun.divideAndConquerCalculationCount}.")
+print(f"\nsmallest distance with divide and conquer : {smallestDistanceDivideAndConquer:.2f} . Number of calculation = {fun.divideAndConquerCalculationCount}.")
 print(f"Total runtime for Divide and Conquer : {total_time_DNC} ms.\n")
-print(f"smallest distance with brute force : {smallestDistanceBruteForce:.2f}. Number of calculation = {fun.burteForceCalculationCount}.")
+print(f"smallest distance with brute force : {smallestDistanceBruteForce:.2f} . Number of calculation = {fun.burteForceCalculationCount}.")
 print(f"Total runtime for Brute Force : {total_time_BF} ms.")
 
 # Plot ke graph jika dimensinya 3
@@ -51,3 +51,5 @@ if dimension==3:
             # sisanya akan berwarna biru
             ax.scatter(*point, c="blue")
     plt.show()
+
+input("Press enter to exit")
